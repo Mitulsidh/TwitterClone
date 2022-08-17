@@ -27,9 +27,15 @@ struct ProfilePhotoSelectorView: View {
                         .padding(.top, 44)
                         .clipShape(Circle())
                 } else {
-                    Circle()
-                        .foregroundColor(Color(.systemBlue))
-                        .frame(width: 180, height: 180)
+                    Image(systemName: "cross.fill")
+                        .resizable()
+                        .foregroundColor(.blue)
+                        .frame(width: 120, height: 120)
+
+                        .background(Color(.white))
+                        
+                        .clipShape(Circle())
+                        
                         .padding(.top, 44)
                     
                 }

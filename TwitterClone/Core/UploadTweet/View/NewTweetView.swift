@@ -99,15 +99,20 @@ struct NewTweetView: View {
                         .scaledToFill()
                         .frame(width: 180, height: 180)
                         .padding(.top, 44)
-                        .clipShape(Circle())
+                        
                 } else {
                     
                     HStack() {
                         
                         
-                        RoundedRectangle(cornerRadius: 25)
+                        Image(systemName: "cross.fill")
+                            .resizable()
                             .foregroundColor(.blue)
-                            .frame(width: 300, height: 400)
+                            .frame(width: 120, height: 120)
+
+                            .background(Color(.white))
+                            
+                            .clipShape(Circle())
                             .padding()
                         
                         

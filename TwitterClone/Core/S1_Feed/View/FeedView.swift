@@ -28,8 +28,13 @@ struct FeedView: View {
             Button {
                 showNewTweetView.toggle()
             } label: {
-                Circle()
+                Image(systemName: "cross.fill")
+                    .foregroundColor(.white)
                     .frame(width: 55, height: 55)
+
+                    .background(Color(.systemBlue))
+                    .frame(width: 55, height: 55)
+                    .clipShape(Circle())
                     .padding()
             }
             .fullScreenCover(isPresented: $showNewTweetView) {
